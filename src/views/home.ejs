@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <!-- css icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <!--Nav-->
+    <div class="nav container">
+
+        
+        <!--logo-->
+        <a href="#" class="logo">lo<span>go</span></a>
+    </div>
+    </header>
+    <!--home-->
+
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title">Criptolife</h2>
+            <span class="home-subtitle">Economia, Cripto e Tecnologia</span>
+        </div>
+
+    </section>
+     <!--post filter-->
+
+     <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span>
+        <span class="filter-item " data-filter="economy">Economy</span>
+        <span class="filter-item" data-filter="cripto">Cripto</span>
+        <span class="filter-item" data-filter="tech">Technology</span>
+     </div>
+
+     <!--posts-->
+     <section class="post container">
+        <!--post box 1-->
+     <% for (let post of posts) { %>
+        <div class="post-box design">
+            <img class="post-img" src="/img/<%=post.img%>" alt="">
+            <h2 class="category"><%=post.category %></h2>
+            <a href="post-page" class="post-title">
+                <%=post.title %>
+            </a>
+            <span class="post-date"><%=post.date %></span>
+            <p class="post-description"><%=post.text %></p>
+            <!--profile-->
+            <div class="profile">
+                <img src="/img/<%=post.imgautor %>" class="profile-img" alt="">
+                <span class="profile-name"><%=post.autor %></span>
+            </div>
+        </div>
+        <%} %> 
+        
+        <!--post box 2-->
+
+
+     </section>
+
+     <!--footer-->
+     <div class="footer container">
+        <p>&#169; Criptolife All Right Reserved </p>
+        <div class="social">
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-gmail"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+        </div>
+     </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--jquery link-->
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
+
